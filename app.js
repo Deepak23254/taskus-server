@@ -27,7 +27,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-mongoose.connect(mongoString.url);
+mongoose.connect(mongoString.prod.url);
 const database = mongoose.connection;
 
 database.on('error', (error) => {
